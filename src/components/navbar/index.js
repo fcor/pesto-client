@@ -4,13 +4,25 @@ import "./styles.css";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="row header">
       <NavLink exact to="/">
-        Home
+        <figure>
+          <img
+            src="https://fakeimg.pl/200/200"
+            alt="logo"
+            className="navbar-logo"
+          ></img>
+        </figure>
       </NavLink>
-      <NavLink exact to="/help">
-        Help
-      </NavLink>
+      <div className="row menu">
+        <NavLink exact className="menu-link" to="/about">
+          About us
+        </NavLink>
+        <NavLink exact className="menu-link" to="/help">
+          Help
+        </NavLink>
+
+      </div>
     </div>
   );
 };

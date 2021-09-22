@@ -1,10 +1,74 @@
+/* Color palette */
+:root {
+  --primary: #5c45eb;
+  --primarydark: #4432b0;
+  --primarylight: rgba(92, 69, 235, 0.8);
+  --secondary: #9bf99f;
+  --lightgray: #6b707a;
+  --lightergray: rgba(241, 239, 255, 0.25);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--lightergray);
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+    url(./assets/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Montserrat"), local("Montserrat-Regular"),
+    url(./assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Montserrat Medium"), local("Montserrat-Medium"),
+    url(./assets/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"),
+    url(./assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url(./assets/fonts/Montserrat-Bold.ttf);
 }
 
 .app {
@@ -13,19 +77,11 @@ body {
   min-height: 100vh;
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: row;
   flex: 1 0 auto;
   overflow: hidden;
-}
-
-.footer{
-  width: 100vw;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .fade-enter {
@@ -38,3 +94,20 @@ body {
   transition: opacity 250ms ease-in;
 }
 
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}

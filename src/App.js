@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Help from "./views/help/";
 import Home from "./views/home/";
 import Navbar from "./components/navbar/";
+import Footer from "./components/footer/";
 import "./index.css";
 
 function App() {
@@ -35,12 +36,6 @@ function App() {
   </Router>
   );
 }
-
-const Footer = () => (
-  <footer className="footer">
-    <p>Copyright © 2021 🤘</p>
-  </footer>
-);
 
 const NotFound = () => (
   <div className="soon">
