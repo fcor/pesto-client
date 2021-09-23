@@ -1,6 +1,6 @@
 .btn {
   display: block;
-  border-radius: 6px;
+  border-radius: 16px;
   border-style: none;
   border-width: 0;
   outline: none;
@@ -11,7 +11,7 @@
   color: var(--primary);
   font-family: "Roboto";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   margin: 1rem auto;
 }
 

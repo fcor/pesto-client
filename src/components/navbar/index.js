@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./styles.css";
+import logo from "../../assets/img/basil.png";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
       <NavLink exact to="/">
         <figure>
           <img
-            src="https://fakeimg.pl/200/200"
+            src={logo}
             alt="logo"
             className="navbar-logo"
           ></img>

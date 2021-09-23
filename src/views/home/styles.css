@@ -1,5 +1,4 @@
 .app-container {
-  border: 1px solid red;
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -17,22 +16,33 @@
   align-items: center;
 }
 
+.description {
+  margin-bottom: 1.5rem;
+}
+
 .examples-section {
-  margin-top: 3rem;
+  margin-top: 2rem;
   align-items: center;
   justify-content: center;
 }
 
 .examples {
-  width: 250px;
+  width: 350px;
   justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.example {
+  justify-content: center;
+  align-items: center;
 }
 
 .example-img{
   border-radius: 100%;
-  width: 60px;
+  width: 80px;
 }
 
 .input-img {
-  width: 100px
+  width: 100px;
+  margin: 2rem;
 }

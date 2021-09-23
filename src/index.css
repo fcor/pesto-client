@@ -111,3 +111,28 @@ figure, p {
   display: flex;
   flex-direction: column;
 }
+
+.text-title {
+  color: var(--primary);
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.text-basic {
+  color: var(--lightgray);
+  font-family: "Roboto";
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.text-basic-primary {
+  color: var(--primary);
+  font-family: "Roboto";
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
