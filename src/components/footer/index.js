@@ -7,8 +7,8 @@ import snfLogo from "../../assets/img/snf.png";
 const Footer = () => {
   return (
     <footer className="column">
-      <div class="footer-top">
-        <div class="logos">
+      <div className="footer-top">
+        <div className="logos">
           <a href="https://www.epfl.ch" target="_blank" rel="noreferrer">
             <img src={epflLogo} alt="epfl logo" height="50" />
           </a>
@@ -20,28 +20,28 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img class="lbm" src={lbmLogo} alt="lbm logo" height="90" />
+            <img className="lbm" src={lbmLogo} alt="lbm logo" height="90" />
           </a>
         </div>
-        <div class="contact-info">
-          <p class="contact-us">Contact us</p>
+        <div className="contact-info">
+          <p className="contact-us">Contact us</p>
           
           <a href="#" target="_blank" rel="noreferrer">
-            <p class="contact-name">Lucien Krapp</p>
+            <p className="contact-name">Lucien Krapp</p>
           </a>
-          <p class="contact-email">lucien.krapp@epfl.ch</p>
+          <p className="contact-email">lucien.krapp@epfl.ch</p>
 
           <a
             href="https://people.epfl.ch/matteo.dalperaro"
             target="_blank"
             rel="noreferrer"
           >
-            <p class="contact-name">Matteo Dal Peraro</p>
+            <p className="contact-name">Matteo Dal Peraro</p>
           </a>
-          <p class="contact-email">matteo.dalperaro@epfl.ch</p>
+          <p className="contact-email">matteo.dalperaro@epfl.ch</p>
         </div>
       </div>
-      <p class="privacy-policy">
+      <p className="privacy-policy">
         Copyright © 2021 Laboratory for biomolecular modeling, EPFL. All rights
         reserved.
       </p>

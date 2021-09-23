@@ -1,0 +1,38 @@
+.app-container {
+  border: 1px solid red;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.input-card {
+  width: 350px;
+  height: 350px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples-section {
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.examples {
+  width: 250px;
+  justify-content: space-between;
+}
+
+.example-img{
+  border-radius: 100%;
+  width: 60px;
+}
+
+.input-img {
+  width: 100px
+}

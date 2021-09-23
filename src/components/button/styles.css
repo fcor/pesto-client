@@ -1,0 +1,24 @@
+.btn {
+  display: block;
+  border-radius: 6px;
+  border-style: none;
+  border-width: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: button;
+  padding: 1rem 1.5rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  margin: 1rem auto;
+}
+
+.btn:enabled:active {
+  transform: scale(0.9);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+}

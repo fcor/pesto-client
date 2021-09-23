@@ -98,7 +98,7 @@ a {
   text-decoration: none;
 }
 
-figure {
+figure, p {
   margin: 0;
 }
 
