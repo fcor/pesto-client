@@ -16,6 +16,13 @@
   align-items: center;
 }
 
+.input-card-bottom {
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 195px;
+}
+
 .description {
   margin-bottom: 1.5rem;
 }
