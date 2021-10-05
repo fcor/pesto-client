@@ -2,7 +2,7 @@
 :root {
   --primary: #5c45eb;
   --primarydark: #4432b0;
-  --primarylight: rgba(92, 69, 235, 0.8);
+  --primarylight: rgba(92, 69, 235, 0.6);
   --secondary: #9bf99f;
   --lightgray: #6b707a;
   --lightergray: rgba(241, 239, 255, 0.25);

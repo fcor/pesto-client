@@ -1,0 +1,55 @@
+.molstar {
+  width: 800px;
+  height: 600px;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-bottom: 1rem;
+}
+ 
+.bt-text {
+  position: absolute;
+  right: 100px;
+}
+
+.pdb-selection {
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  height: 2.25rem;
+}
+
+.pdb-option {
+  cursor: pointer;
+  color: var(--primarylight);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.pdb-option:hover,
+.pdb-option.selected {
+  color: var(--primary);
+}
+
+.pdb-option:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  border-radius: 3px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+
+.pdb-option.selected:after{
+  width: 100%;
+  background: var(--primary);
+}
+
+.btns-viewer {
+  margin: 2rem 0 4rem 0;
+}

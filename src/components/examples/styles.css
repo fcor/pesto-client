@@ -1,0 +1,21 @@
+.examples-section {
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.examples {
+  width: 350px;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.example {
+  justify-content: center;
+  align-items: center;
+}
+
+.example-img{
+  border-radius: 100%;
+  width: 80px;
+}
