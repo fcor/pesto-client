@@ -136,3 +136,10 @@ figure, p {
   margin: 0.5rem 0;
   text-align: center;
 }
+
+.swal-button,
+.swal-button:not([disabled]):hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border: none;
+}

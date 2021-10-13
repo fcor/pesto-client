@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 
-const Button = ({ children, handleClick, type }) => {
+const Button = ({ children, handleClick, type, size, loading = false }) => {
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  useEffect(() => {
+    setIsDisabled(loading);
+  }, [loading]);
+
   if (type === "input") {
     return (
-      <label className="btn">
+      <label className={`btn ${size}`}>
         {children}
         <input
           onChange={handleClick}
@@ -17,8 +23,8 @@ const Button = ({ children, handleClick, type }) => {
     );
   }
   return (
-    <button className="btn" onClick={handleClick}>
-      {children}
+    <button className={`btn ${size}`} disabled={isDisabled} onClick={handleClick}>
+      {loading ? "Loading..." : children}
     </button>
   );
 };

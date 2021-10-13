@@ -7,21 +7,22 @@
 }
 
 .input-card {
-  width: 350px;
-  height: 350px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  width: 35rem;
+  /* height: 350px; */
+  /* background-color: #FFFFFF; */
+  /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); */
   border-radius: 16px;
   padding: 1rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .input-card-bottom {
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 195px;
+  /* width: 350px; */
+  /* height: 195px; */
 }
 
 .description {
@@ -30,5 +31,52 @@
 
 .input-img {
   width: 100px;
-  margin: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.search-container {
+  justify-content: space-between;
+}
+
+.search-input {
+  margin: 0 0.75rem;
+  padding: 8px 4px;
+  border: 3px solid var(--primary);
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  min-width: 150px;
+  max-width: 200px;
+  font-family: Roboto;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.search-input-box {
+  margin-right: 2rem;
+}
+
+.pdb-text {
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+  border: 3px solid var(--primary);
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  width: 100%;
+  font-family: Roboto;
+  color: black;
+  font-size: 14px;
+}
+
+.pdb-text::placeholder,
+.text-input::placeholder {
+  color: var(--primarylight);
+  font-size: 14px;
+  font-family: Roboto;
+}
+
+.pdb-text:focus,
+.search-input:focus {
+  box-shadow: 0px 0px 6px 1px var(--primary);
 }

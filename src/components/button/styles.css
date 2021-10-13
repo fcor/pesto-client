@@ -1,6 +1,6 @@
 .btn {
   display: block;
-  border-radius: 16px;
+  border-radius: 6px;
   border-style: none;
   border-width: 0;
   outline: none;
@@ -13,6 +13,7 @@
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem auto;
+  box-sizing: border-box;
 }
 
 .btn:enabled:active {
@@ -21,4 +22,17 @@
 
 .btn:disabled {
   opacity: 0.7;
+}
+
+.btn.medium {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  padding: 6px 22px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  min-width: 7.5rem;
+  /* width: 7.5rem; */
 }

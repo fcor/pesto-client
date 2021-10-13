@@ -4,14 +4,54 @@ import Loading from "../../components/loading";
 import "./styles.css";
 import logo from "../../assets/img/basil.png";
 import Molstar from "../../components/molstar";
-import Examples from "../../components/examples";
+import swal from 'sweetalert';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
   const [pdbs, setPdbs] = useState(null);
+  const [value, setValue] = useState("");
+  const [pdb, setPdb] = useState("");
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handlePDBChange = (e) => {
+    setPdb(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    setIsSearching(true);
+    fetch(`https://files.rcsb.org/view/${value}.pdb`)
+      .then((response) => {
+        if (response.status === 404) {
+          throw new Error("error");
+        } else {
+          return response.text();
+        }
+      })
+      .then(function (data) {
+        setIsSearching(false);
+        setPdb(data);
+      })
+      .catch(function (error) {
+        console.log("Error: ", error);
+        setIsSearching(false);
+        swal("Something went wrong", "Please, try again", "error");
+      });
+  };
 
   const handleUpload = (e) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      setPdb(reader.result);
+    }
+    reader.readAsText(e.target.files[0]);
+  }
+
+  const handleSubmit = (e) => {
     setIsLoading(true);
     const data = new FormData();
     data.append("pdb", e.target.files[0]);
@@ -50,19 +90,48 @@ const Home = () => {
             </div>
           ) : (
             <div className="column input-card-bottom">
-              <p className="text-title">Short fancy title</p>
+              <p className="text-title">PESTO</p>
               <p className="text-basic description">
-                Using PESTO is easy. Upload your PDB and get the 5 things. Fancy
-                description.
+                Cupcake ipsum dolor sit amet pudding. Topping tiramisu tiramisu
+                cupcake cake muffin powder chocolate cake cookie. Cupcake pastry
+                marzipan topping dessert dragée jelly-o bonbon.
               </p>
-              <Button handleClick={handleUpload} type="input">
-                Upload PDB
+              <div className="search-container row">
+                <div className="search-input-box row">
+                  <input
+                    type="text"
+                    className="search-input"
+                    placeholder="2CUA"
+                    onChange={handleChange}
+                    value={value}
+                  />
+                  <Button
+                    handleClick={handleSearch}
+                    loading={isSearching}
+                    size="medium"
+                  >
+                    Search
+                  </Button>
+                </div>
+                <Button handleClick={handleUpload} type="input" size="medium">
+                  Upload PDB
+                </Button>
+              </div>
+              <textarea
+                className="pdb-text"
+                cols="30"
+                rows="10"
+                placeholder="Copy-Paste molecule here"
+                onChange={handlePDBChange}
+                value={pdb}
+              />
+              <Button handleClick={() => console.log("Parse")} size="medium">
+                Detect chains
               </Button>
             </div>
           )}
         </div>
       )}
-      {!isModelLoaded && <Examples />}
     </div>
   );
 };
