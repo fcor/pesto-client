@@ -29,7 +29,13 @@ const Home = () => {
 
   const handleSearch = (e) => {
     setIsSearching(true);
-    fetch(`https://files.rcsb.org/view/${value}.pdb`)
+
+    const url =
+      value.length === 4
+        ? `https://files.rcsb.org/view/${value}.pdb`
+        : `https://alphafold.ebi.ac.uk/files/AF-${value}-F1-model_v1.pdb`;
+        
+    fetch(url)
       .then((response) => {
         if (response.status === 404) {
           throw new Error("error");
@@ -70,7 +76,7 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     setIsLoading(true);
-    console.log(selectedChains)
+    console.log(selectedChains);
     // const data = new FormData();
     // data.append("pdb", e.target.files[0]);
     // fetch("http://lbmpc2:44777/i/", {
