@@ -67,6 +67,7 @@
   font-family: Roboto;
   color: black;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .pdb-text::placeholder,

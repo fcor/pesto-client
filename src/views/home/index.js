@@ -1,18 +1,23 @@
 import React, { useState } from "react";
+import swal from "sweetalert";
 import Button from "../../components/button";
 import Loading from "../../components/loading";
-import "./styles.css";
 import logo from "../../assets/img/basil.png";
 import Molstar from "../../components/molstar";
-import swal from 'sweetalert';
+import ChainGrid from "../../components/chainGrid";
+import parsePdb from "../../utils/parsePdb";
+import "./styles.css";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
+  const [isPdbParsed, setIsPdbParsed] = useState(false);
   const [pdbs, setPdbs] = useState(null);
   const [value, setValue] = useState("");
   const [pdb, setPdb] = useState("");
+  const [pdbData, setPdbData] = useState(null);
+  const [selectedChains, setSelectedChains] = useState([]);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -47,30 +52,43 @@ const Home = () => {
     const reader = new FileReader();
     reader.onload = () => {
       setPdb(reader.result);
-    }
+    };
     reader.readAsText(e.target.files[0]);
-  }
+  };
+
+  const handleParsePdb = () => {
+    if (pdb.length === 0) return;
+    const result = parsePdb(pdb);
+    setIsPdbParsed(true);
+    setPdbData(result);
+    setSelectedChains(result.chains);
+  };
+
+  const handleSwitchChange = (selectedChains) => {
+    console.log(selectedChains);
+  };
 
   const handleSubmit = (e) => {
     setIsLoading(true);
-    const data = new FormData();
-    data.append("pdb", e.target.files[0]);
-    fetch("http://lbmpc2:44777/i/", {
-      method: "POST",
-      body: data,
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (myJson) {
-        setPdbs(myJson);
-        setIsLoading(false);
-        setIsModelLoaded(true);
-      })
-      .catch(function (error) {
-        console.log("Something went wrong", error);
-        setIsLoading(false);
-      });
+    console.log(selectedChains)
+    // const data = new FormData();
+    // data.append("pdb", e.target.files[0]);
+    // fetch("http://lbmpc2:44777/i/", {
+    //   method: "POST",
+    //   body: data,
+    // })
+    //   .then(function (response) {
+    //     return response.json();
+    //   })
+    //   .then(function (myJson) {
+    //     setPdbs(myJson);
+    //     setIsLoading(false);
+    //     setIsModelLoaded(true);
+    //   })
+    //   .catch(function (error) {
+    //     console.log("Something went wrong", error);
+    //     setIsLoading(false);
+    //   });
   };
 
   return (
@@ -125,9 +143,21 @@ const Home = () => {
                 onChange={handlePDBChange}
                 value={pdb}
               />
-              <Button handleClick={() => console.log("Parse")} size="medium">
+              <Button handleClick={handleParsePdb} size="medium">
                 Detect chains
               </Button>
+
+              {isPdbParsed && (
+                <>
+                  <ChainGrid
+                    data={pdbData}
+                    handleSwitchChange={handleSwitchChange}
+                  />
+                  <Button handleClick={handleSubmit} size="medium">
+                    Submit
+                  </Button>
+                </>
+              )}
             </div>
           )}
         </div>
