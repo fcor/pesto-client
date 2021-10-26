@@ -34,7 +34,7 @@ const Home = () => {
       value.length === 4
         ? `https://files.rcsb.org/view/${value}.pdb`
         : `https://alphafold.ebi.ac.uk/files/AF-${value}-F1-model_v1.pdb`;
-        
+
     fetch(url)
       .then((response) => {
         if (response.status === 404) {
@@ -71,30 +71,36 @@ const Home = () => {
   };
 
   const handleSwitchChange = (selectedChains) => {
-    console.log(selectedChains);
+    setSelectedChains(selectedChains);
   };
 
   const handleSubmit = (e) => {
     setIsLoading(true);
-    console.log(selectedChains);
-    // const data = new FormData();
-    // data.append("pdb", e.target.files[0]);
-    // fetch("http://lbmpc2:44777/i/", {
-    //   method: "POST",
-    //   body: data,
-    // })
-    //   .then(function (response) {
-    //     return response.json();
-    //   })
-    //   .then(function (myJson) {
-    //     setPdbs(myJson);
-    //     setIsLoading(false);
-    //     setIsModelLoaded(true);
-    //   })
-    //   .catch(function (error) {
-    //     console.log("Something went wrong", error);
-    //     setIsLoading(false);
-    //   });
+    const data = {
+      pdb: pdb,
+      chains: selectedChains
+    }
+    fetch("http://lbmpc2:44777/i/", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson)
+        setPdbs(myJson);
+        setIsLoading(false);
+        setIsModelLoaded(true);
+      })
+      .catch(function (error) {
+        swal("Something went wrong", "Please, try again", "error");
+        console.log("Error: ", error)
+        setIsLoading(false);
+      });
   };
 
   return (
