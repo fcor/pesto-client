@@ -15,7 +15,7 @@ const BASE_URL = "http://lbmpc2:44777";
 const Molstar = ({ data, handleReset }) => {
   const domEl = useRef(null);
   const viewer = useRef(null);
-  const [pdb, setPdb] = useState(1);
+  const [pdb, setPdb] = useState(5);
 
   const zipUrl = useMemo(() => {
     return data.zip_uri;
@@ -92,20 +92,20 @@ const Molstar = ({ data, handleReset }) => {
   return (
     <div className="column">
       <ul className="pdb-selection row">
+        <li className={`pdb-option ${isSelected(5)}`} onClick={() => setPdb(5)}>
+          Protein
+        </li>
         <li className={`pdb-option ${isSelected(1)}`} onClick={() => setPdb(1)}>
           DNA-RNA
-        </li>
-        <li className={`pdb-option ${isSelected(2)}`} onClick={() => setPdb(2)}>
-          Ion
-        </li>
-        <li className={`pdb-option ${isSelected(3)}`} onClick={() => setPdb(3)}>
-          Ligand
         </li>
         <li className={`pdb-option ${isSelected(4)}`} onClick={() => setPdb(4)}>
           Lipid
         </li>
-        <li className={`pdb-option ${isSelected(5)}`} onClick={() => setPdb(5)}>
-          Protein
+        <li className={`pdb-option ${isSelected(3)}`} onClick={() => setPdb(3)}>
+          Ligand
+        </li>
+        <li className={`pdb-option ${isSelected(2)}`} onClick={() => setPdb(2)}>
+          Ion
         </li>
       </ul>
       <div ref={domEl} className="molstar"></div>

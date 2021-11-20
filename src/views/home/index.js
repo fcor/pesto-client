@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import swal from "sweetalert";
 import Button from "../../components/button";
 import Loading from "../../components/loading";
-import logo from "../../assets/img/basil.png";
+import logo from "../../assets/img/basil2.png";
 import Molstar from "../../components/molstar";
 import ChainGrid from "../../components/chainGrid";
 import parsePdb from "../../utils/parsePdb";
