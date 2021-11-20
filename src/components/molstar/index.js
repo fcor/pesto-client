@@ -110,21 +110,48 @@ const Molstar = ({ data }) => {
       </ul>
       <div ref={domEl} className="molstar"></div>
       {interf.length > 0 ? (
-        <p className="text-basic-primary">{`Interface: ${interf}`}</p>
+        <div className="interface-grid ">
+          <div className="grid-header">
+            <p className="grid-title">Chain</p>
+          </div>
+          <div className="grid-header">
+            <p className="grid-title">Res Name</p>
+          </div>
+          <div className="grid-header">
+            <p className="grid-title">Res ID</p>
+          </div>
+          <div className="grid-header">
+            <p className="grid-title">Prediction</p>
+          </div>
+          {interf.map((interf) => (
+            <React.Fragment key={`${interf.chain}-${interf.resid}`}>
+              <div className="grid-element">
+                <p className="grid-text">{interf.chain}</p>
+              </div>
+              <div className="grid-element">
+                <p className="grid-text">{interf.resname}</p>
+              </div>
+              <div className="grid-element">
+                <p className="grid-text">{interf.resid}</p>
+              </div>
+              <div className="grid-element">
+                <p className="grid-text">{interf.prediction}</p>
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
       ) : (
         <p className="text-basic-primary">No interface</p>
       )}
 
       <div className="row btns-viewer">
-        <Button handleClick={() => window.location.href = BASE_URL + url}>
+        <Button handleClick={() => (window.location.href = BASE_URL + url)}>
           Download PDB
         </Button>
-        <Button handleClick={() => window.location.href = BASE_URL + zipUrl}>
+        <Button handleClick={() => (window.location.href = BASE_URL + zipUrl)}>
           Download all PDBs
         </Button>
-        <Button handleClick={() => console.log("Click")}>
-          Upload new PDB
-        </Button>
+        <Button handleClick={() => console.log("Click")}>Upload new PDB</Button>
       </div>
     </div>
   );

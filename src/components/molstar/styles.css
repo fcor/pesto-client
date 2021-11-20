@@ -53,3 +53,10 @@
 .btns-viewer {
   margin: 2rem 0 4rem 0;
 }
+
+.interface-grid {
+  align-self: flex-start;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
