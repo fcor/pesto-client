@@ -74,6 +74,15 @@ const Home = () => {
     setSelectedChains(selectedChains);
   };
 
+  const handleReset = () => {
+    setIsModelLoaded(false);
+    setValue("");
+    setPdb("");
+    setSelectedChains([]);
+    setIsPdbParsed(false);
+    setPdbData(null);
+  }
+
   const handleSubmit = (e) => {
     setIsLoading(true);
     const data = {
@@ -91,7 +100,6 @@ const Home = () => {
         return response.json();
       })
       .then(function (myJson) {
-        console.log(myJson)
         setPdbs(myJson);
         setIsLoading(false);
         setIsModelLoaded(true);
@@ -105,7 +113,7 @@ const Home = () => {
 
   return (
     <div className="app-container column">
-      {isModelLoaded && <Molstar data={pdbs} />}
+      {isModelLoaded && <Molstar data={pdbs} handleReset={handleReset} />}
       {!isModelLoaded && (
         <div className="input-card column">
           <figure>

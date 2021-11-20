@@ -12,7 +12,7 @@ import "./styles.css";
 
 const BASE_URL = "http://lbmpc2:44777";
 
-const Molstar = ({ data }) => {
+const Molstar = ({ data, handleReset }) => {
   const domEl = useRef(null);
   const viewer = useRef(null);
   const [pdb, setPdb] = useState(1);
@@ -151,7 +151,7 @@ const Molstar = ({ data }) => {
         <Button handleClick={() => (window.location.href = BASE_URL + zipUrl)}>
           Download all PDBs
         </Button>
-        <Button handleClick={() => console.log("Click")}>Upload new PDB</Button>
+        <Button handleClick={handleReset}>Upload new PDB</Button>
       </div>
     </div>
   );
