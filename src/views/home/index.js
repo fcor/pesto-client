@@ -89,7 +89,7 @@ const Home = () => {
       pdb: pdb,
       chains: selectedChains
     }
-    fetch("http://lbmpc2:44777/i/", {
+    fetch("https://pesto.epfl.ch/api/i/", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

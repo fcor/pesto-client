@@ -10,7 +10,7 @@ import { Viewer } from "molstar/build/viewer/molstar";
 import Button from "../button";
 import "./styles.css";
 
-const BASE_URL = "http://lbmpc2:44777";
+const BASE_URL = "https://pesto.epfl.ch/api/";
 
 const Molstar = ({ data, handleReset }) => {
   const domEl = useRef(null);
