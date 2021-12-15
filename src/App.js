@@ -22,7 +22,7 @@ function App() {
                 classNames="fade"
               >
                 <Switch location={location}>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/" component={() => <Home />} />
                   <Route path="/help" component={Help} />
                   <Route component={NotFound} />
                 </Switch>
