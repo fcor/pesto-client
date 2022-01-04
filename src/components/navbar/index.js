@@ -16,12 +16,12 @@ const Navbar = () => {
         </figure>
       </NavLink>
       <div className="row menu">
-        <NavLink exact className="menu-link" to="/about">
+        {/*<NavLink exact className="menu-link" to="/about">
           About us
         </NavLink>
         <NavLink exact className="menu-link" to="/help">
           Help
-        </NavLink>
+  </NavLink>*/}
 
       </div>
     </div>

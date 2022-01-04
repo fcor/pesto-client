@@ -128,11 +128,15 @@ const Home = () => {
             </div>
           ) : (
             <div className="column input-card-bottom">
-              <p className="text-title">PESTO</p>
+              <p className="text-title">PeSTo</p>
               <p className="text-basic description">
-                Cupcake ipsum dolor sit amet pudding. Topping tiramisu tiramisu
-                cupcake cake muffin powder chocolate cake cookie. Cupcake pastry
-                marzipan topping dessert dragée jelly-o bonbon.
+              Online tool to predict protein interaction interfaces from a protein 
+              structure. This method is parameter-free and fast. Select an existing
+               experimental structures by PDB ID, a predicted structures by AlphaFold
+                using UniProt ID or upload your own PDB file. After detecting and 
+                selecting the desired chains, submit your job to run the predictive model. 
+                Your results should be available in less than a minute.
+                 If an error occurs, the PDB file might be not correctly formated or the input structure is too large.
               </p>
               <div className="search-container row">
                 <div className="search-input-box row">
