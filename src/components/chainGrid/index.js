@@ -35,7 +35,7 @@ const ChainGrid = ({ data, handleSwitchChange }) => {
 
   return (
     <section className="protein-section">
-      <h3 className="pdb-section-title">Protein and nucleic acids</h3>
+      <h3 className="pdb-section-title">Select chains</h3>
       <div className="protein-grid ">
         <div className="grid-header">
           <p className="grid-title">Chain</p>

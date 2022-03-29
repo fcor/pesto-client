@@ -81,14 +81,14 @@ const Home = () => {
     setSelectedChains([]);
     setIsPdbParsed(false);
     setPdbData(null);
-  }
+  };
 
   const handleSubmit = (e) => {
     setIsLoading(true);
     const data = {
       pdb: pdb,
-      chains: selectedChains
-    }
+      chains: selectedChains,
+    };
     fetch("https://pesto.epfl.ch/api/i/", {
       method: "POST",
       body: JSON.stringify(data),
@@ -106,7 +106,7 @@ const Home = () => {
       })
       .catch(function (error) {
         swal("Something went wrong", "Please, try again", "error");
-        console.log("Error: ", error)
+        console.log("Error: ", error);
         setIsLoading(false);
       });
   };
@@ -128,11 +128,29 @@ const Home = () => {
             </div>
           ) : (
             <div className="column input-card-bottom">
-              <p className="text-title">PESTO</p>
+              <p className="text-title">PeSTo</p>
               <p className="text-basic description">
-                Cupcake ipsum dolor sit amet pudding. Topping tiramisu tiramisu
-                cupcake cake muffin powder chocolate cake cookie. Cupcake pastry
-                marzipan topping dessert dragée jelly-o bonbon.
+                PeSTo (Protein Structure Transformer) is a parameter-free
+                geometric deep learning method to predict protein interaction
+                interfaces from a protein structure. It is available for free
+                without registration as an online tool. A manuscript of the
+                method is in preparation and will be available soon.
+              </p>
+              <p className="text-title">How to use</p>
+              <p className="text-basic description">
+                Select an existing experimental structures by
+                <ul>
+                  <li>PDB ID</li>
+                  <li>
+                    UniProt ID using existing predicted structure from AlphaFold
+                  </li>
+                  <li>Upload your own PDB formated structure</li>
+                </ul>
+                After detecting and selecting the desired chains, submit your
+                job to run the predictive model. Your results should be
+                available in less than a minute. If an error occurs, the PDB
+                file might be not correctly formated or the input structure is
+                too large.
               </p>
               <div className="search-container row">
                 <div className="search-input-box row">

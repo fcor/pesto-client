@@ -25,6 +25,11 @@
   /* height: 195px; */
 }
 
+.text-basic {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .description {
   margin-bottom: 1.5rem;
 }
