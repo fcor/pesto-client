@@ -10,17 +10,17 @@ const Footer = () => {
       <div className="footer-top">
         <div className="logos">
           <a href="https://www.epfl.ch" target="_blank" rel="noreferrer">
-            <img src={epflLogo} alt="epfl logo" height="50" />
+            <img className="footer-img" src={epflLogo} alt="epfl logo" height="50" />
           </a>
           <a href="http://www.snf.ch" target="_blank" rel="noreferrer">
-            <img src={snfLogo} alt="snf logo" height="50" />
+            <img className="footer-img" src={snfLogo} alt="snf logo" height="50" />
           </a>
           <a
             href="https://www.epfl.ch/labs/lbm/"
             target="_blank"
             rel="noreferrer"
           >
-            <img className="lbm" src={lbmLogo} alt="lbm logo" height="90" />
+            <img className="footer-img lbm" src={lbmLogo} alt="lbm logo" height="90" />
           </a>
         </div>
         <div className="contact-info">
