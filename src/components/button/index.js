@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
-const Button = ({ children, handleClick, type, size, loading = false }) => {
+const Button = ({ children, handleClick, type, size, loading = false, styles = "" }) => {
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const Button = ({ children, handleClick, type, size, loading = false }) => {
 
   if (type === "input") {
     return (
-      <label className={`btn ${size}`}>
+      <label className={`btn ${size} ${styles}`}>
         {children}
         <input
           onChange={handleClick}

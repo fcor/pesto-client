@@ -32,3 +32,9 @@
 .menu-link:hover {
   color: var(--secondary);
 }
+
+@media screen and (max-width: 650px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}

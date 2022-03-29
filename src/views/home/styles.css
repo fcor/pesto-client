@@ -86,3 +86,42 @@
 .search-input:focus {
   box-shadow: 0px 0px 6px 1px var(--primary);
 }
+
+@media screen and (max-width: 650px) {
+  .input-card {
+    width: 85vw;
+    border: 1px solid red;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-input-box {
+    margin-right: 0;
+  }
+
+  .search-input {
+    width: 50%;
+    margin-left: 0;
+  }
+
+  .upload-btn {
+    width: 120px;
+    align-self: center;
+    margin-top: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .search-input-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+  }
+}

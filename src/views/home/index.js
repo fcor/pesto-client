@@ -173,7 +173,7 @@ const Home = () => {
                     Fetch PDB/AF-EBI
                   </Button>
                 </div>
-                <Button handleClick={handleUpload} type="input" size="medium">
+                <Button styles="upload-btn" handleClick={handleUpload} type="input" size="medium">
                   Upload PDB
                 </Button>
               </div>
