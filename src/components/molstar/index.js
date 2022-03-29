@@ -145,13 +145,13 @@ const Molstar = ({ data, handleReset }) => {
       )}
 
       <div className="row btns-viewer">
-        <Button handleClick={() => (window.location.href = BASE_URL + url)}>
+        <Button styles="molstar-btn" handleClick={() => (window.location.href = BASE_URL + url)}>
           Download PDB
         </Button>
-        <Button handleClick={() => (window.location.href = BASE_URL + zipUrl)}>
+        <Button styles="molstar-btn" handleClick={() => (window.location.href = BASE_URL + zipUrl)}>
           Download all PDBs
         </Button>
-        <Button handleClick={handleReset}>Upload new PDB</Button>
+        <Button styles="molstar-btn" handleClick={handleReset}>Upload new PDB</Button>
       </div>
     </div>
   );

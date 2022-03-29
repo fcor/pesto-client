@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
-const Button = ({ children, handleClick, type, size, loading = false, styles = "" }) => {
+const Button = ({
+  children,
+  handleClick,
+  type,
+  size = "",
+  loading = false,
+  styles = "",
+}) => {
   const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
@@ -23,7 +30,11 @@ const Button = ({ children, handleClick, type, size, loading = false, styles = "
     );
   }
   return (
-    <button className={`btn ${size}`} disabled={isDisabled} onClick={handleClick}>
+    <button
+      className={`btn ${size} ${styles}`}
+      disabled={isDisabled}
+      onClick={handleClick}
+    >
       {loading ? "Loading..." : children}
     </button>
   );

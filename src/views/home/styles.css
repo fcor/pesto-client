@@ -90,7 +90,6 @@
 @media screen and (max-width: 650px) {
   .input-card {
     width: 85vw;
-    border: 1px solid red;
   }
 
   .search-container {

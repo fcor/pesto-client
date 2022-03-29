@@ -60,3 +60,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+@media screen and (max-width: 850px) {
+  .molstar {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .btns-viewer {
+    flex-direction: column;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .molstar-btn {
+    width: 184px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .interface-grid,
+  .pdb-selection{
+    width: 90vw;
+  }
+
+  .pdb-option {
+    font-size: 1rem;
+  }
+}
