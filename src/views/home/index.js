@@ -138,19 +138,23 @@ const Home = () => {
               </p>
               <p className="text-title">How to use</p>
               <p className="text-basic description">
-                Select an existing experimental structures by
+                Copy-paste your atomic coordinates in PDB format, or upload a
+                PDB file from your drive, or fetch a protein structure/model
+                from:
                 <ul>
-                  <li>PDB ID</li>
                   <li>
-                    UniProt ID using existing predicted structure from AlphaFold
+                    The protein data bank by typing a PDB ID. Example: 2CUA
+                  </li>
+                  <li>
+                    The AlphaFold-EBI database by typing a Uniprot ID. Example:
+                    P27695
                   </li>
                   <li>Upload your own PDB formated structure</li>
                 </ul>
-                After detecting and selecting the desired chains, submit your
-                job to run the predictive model. Your results should be
-                available in less than a minute. If an error occurs, the PDB
-                file might be not correctly formated or the input structure is
-                too large.
+                Then click "Detect chains", select one or more, and submit your
+                job to run the prediction. Your results should be available in
+                less than a minute. If an error occurs, the PDB file might be
+                not correctly formated or the input structure is too big
               </p>
               <div className="search-container row">
                 <div className="search-input-box row">
@@ -166,7 +170,7 @@ const Home = () => {
                     loading={isSearching}
                     size="medium"
                   >
-                    Search
+                    Fetch PDB/AF-EBI
                   </Button>
                 </div>
                 <Button handleClick={handleUpload} type="input" size="medium">
