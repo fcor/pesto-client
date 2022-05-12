@@ -32,7 +32,7 @@ const PolicyBanner = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://molecularweb.epfl.ch/assets/policy.pdf"
+            href="https://molecularweb.epfl.ch/assets/Pesto_Spark_Privacy_Policy_LFK.pdf"
           >
             Learn more
           </a>
