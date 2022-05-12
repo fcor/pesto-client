@@ -5,6 +5,7 @@ import Help from "./views/help/";
 import Home from "./views/home/";
 import Navbar from "./components/navbar/";
 import Footer from "./components/footer/";
+import PolicyBanner from "./components/policyBanner/";
 import "./index.css";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         />
       </div>
       <Footer />
+      <PolicyBanner />
     </div>
   </Router>
   );

@@ -136,6 +136,20 @@ const Home = () => {
                 without registration as an online tool. A manuscript of the
                 method is in preparation and will be available soon.
               </p>
+
+              <p className="text-basic description align-left">
+                Learn more about this project in this&nbsp;
+                <span>
+                  <a
+                    className="preprint-link"
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.biorxiv.org/content/10.1101/2022.05.09.491165v1.article-info"
+                  >
+                    preprint at Biorxiv.
+                  </a>
+                </span>
+              </p>
               <p className="text-title">How to use</p>
               <p className="text-basic description">
                 Copy-paste your atomic coordinates in PDB format, or upload a
@@ -173,7 +187,12 @@ const Home = () => {
                     Fetch PDB/AF-EBI
                   </Button>
                 </div>
-                <Button styles="upload-btn" handleClick={handleUpload} type="input" size="medium">
+                <Button
+                  styles="upload-btn"
+                  handleClick={handleUpload}
+                  type="input"
+                  size="medium"
+                >
                   Upload PDB
                 </Button>
               </div>
