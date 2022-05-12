@@ -29,7 +29,11 @@ const PolicyBanner = () => {
         We use cookies to improve your experience on our site. By using PESTO
         you agree to our privacy policy.&nbsp;
         <span>
-          <a target="_blank" href="/assets/policy.pdf">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://molecularweb.epfl.ch/assets/policy.pdf"
+          >
             Learn more
           </a>
         </span>

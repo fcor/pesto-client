@@ -151,7 +151,7 @@ const Home = () => {
                 </span>
               </p>
               <p className="text-title">How to use</p>
-              <p className="text-basic description">
+              <div className="text-basic description">
                 Copy-paste your atomic coordinates in PDB format, or upload a
                 PDB file from your drive, or fetch a protein structure/model
                 from:
@@ -169,7 +169,7 @@ const Home = () => {
                 job to run the prediction. Your results should be available in
                 less than a minute. If an error occurs, the PDB file might be
                 not correctly formated or the input structure is too big
-              </p>
+              </div>
               <div className="search-container row">
                 <div className="search-input-box row">
                   <input
