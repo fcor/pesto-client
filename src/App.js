@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Help from "./views/help/";
+import About from "./views/about/";
 import Home from "./views/home/";
 import Navbar from "./components/navbar/";
 import Footer from "./components/footer/";
@@ -25,6 +26,7 @@ function App() {
                 <Switch location={location}>
                   <Route exact path="/" component={() => <Home />} />
                   <Route path="/help" component={Help} />
+                  <Route path="/about" component={About} />
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
