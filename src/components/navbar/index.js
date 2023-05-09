@@ -33,7 +33,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" className="navbar-logo"></img>
         </figure>
       </NavLink>
-      <div className={`menu row ${animationCS(mobileMenuActive)}`}>
+      {/* <div className={`menu row ${animationCS(mobileMenuActive)}`}>
         <NavLink exact className="menu-link" to="/about">
           About us
         </NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className={`bar b1 ${animationCS(mobileMenuActive)}`}></div>
         <div className={`bar b2 ${animationCS(mobileMenuActive)}`}></div>
         <div className={`bar b3 ${animationCS(mobileMenuActive)}`}></div>
-      </div>
+      </div> */}
     </div>
   );
 };

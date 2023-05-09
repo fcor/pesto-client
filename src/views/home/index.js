@@ -144,9 +144,9 @@ const Home = () => {
                     className="preprint-link"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.biorxiv.org/content/10.1101/2022.05.09.491165v1.article-info"
+                    href="https://www.nature.com/articles/s41467-023-37701-8"
                   >
-                    preprint at Biorxiv.
+                    paper at Nature Communications.
                   </a>
                 </span>
               </p>
