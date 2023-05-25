@@ -33,7 +33,7 @@ const Home = () => {
     const url =
       value.length === 4
         ? `https://files.rcsb.org/view/${value}.pdb`
-        : `https://alphafold.ebi.ac.uk/files/AF-${value}-F1-model_v1.pdb`;
+        : `https://alphafold.ebi.ac.uk/files/AF-${value}-F1-model_v4.pdb`;
 
     fetch(url)
       .then((response) => {
