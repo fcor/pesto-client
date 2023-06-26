@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/";
 import Footer from "./components/footer/";
 import PolicyBanner from "./components/policyBanner/";
 import "./index.css";
+import NewApp from "./views/newApp";
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
               >
                 <Switch location={location}>
                   <Route exact path="/" component={() => <Home />} />
-                  <Route path="/help" component={Help} />
-                  <Route path="/about" component={About} />
+                  <Route path="/NewApp" component={NewApp} />
+                  {/* <Route path="/about" component={About} /> */}
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>
